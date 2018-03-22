@@ -9,11 +9,11 @@ import java.io.Serializable;
 
 @Component
 @Scope("singleton")
-public class SearchCriteria implements Serializable {
+public class SearchCriteria implements Serializable{
 
     private String text;
 
-    private SearchType searchType;
+    private SearchType searchType = SearchType.TITLE;
 
     private Character letter;
 

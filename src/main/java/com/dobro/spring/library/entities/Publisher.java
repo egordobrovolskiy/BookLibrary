@@ -25,10 +25,10 @@ public class Publisher {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Publisher that = (Publisher) o;
+        Publisher publisher = (Publisher) o;
 
-        if (id != that.id) return false;
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (id != publisher.id) return false;
+        if (name != null ? !name.equals(publisher.name) : publisher.name != null) return false;
 
         return true;
     }
@@ -38,5 +38,10 @@ public class Publisher {
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -1,6 +1,6 @@
 package com.dobro.spring.library.entities;
 
-public class Genre {
+public class    Genre {
     private long id;
     private String name;
 
@@ -20,6 +20,7 @@ public class Genre {
         this.name = name;
     }
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -28,7 +29,9 @@ public class Genre {
         Genre genre = (Genre) o;
 
         if (id != genre.id) return false;
-        return name != null ? name.equals(genre.name) : genre.name == null;
+        if (name != null ? !name.equals(genre.name) : genre.name != null) return false;
+
+        return true;
     }
 
     @Override
@@ -36,5 +39,10 @@ public class Genre {
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

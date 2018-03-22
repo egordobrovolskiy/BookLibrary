@@ -43,12 +43,12 @@ public class Vote {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Vote that = (Vote) o;
+        Vote vote = (Vote) o;
 
-        if (id != that.id) return false;
-        if (bookId != that.bookId) return false;
-        if (value != null ? !value.equals(that.value) : that.value != null) return false;
-        if (username != null ? !username.equals(that.username) : that.username != null) return false;
+        if (bookId != vote.bookId) return false;
+        if (id != vote.id) return false;
+        if (username != null ? !username.equals(vote.username) : vote.username != null) return false;
+        if (value != null ? !value.equals(vote.value) : vote.value != null) return false;
 
         return true;
     }

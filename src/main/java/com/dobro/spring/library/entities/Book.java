@@ -1,9 +1,10 @@
 package com.dobro.spring.library.entities;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
 
-public class Book implements java.io.Serializable {
+public class Book implements Serializable {
 
     private Long id;
     private Author author;
