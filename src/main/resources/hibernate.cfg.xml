@@ -4,21 +4,21 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <!--<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>-->
     <!--<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=convertToNull</property>-->
-    <property name="hibernate.show_sql">true</property>
     <!--<property name="hibernate.current_session_context_class">thread</property>-->
     <!--<property name="hibernate.connection.datasource">jdbc/Library</property>-->
     <!--<property name="hibernate.connection.username">root</property>-->
     <!--<property name="hibernate.connection.password">12345678</property>-->
     <!--<property name="connection.url">jdbc:mysql://localhost:3306/library</property>-->
     <!--<property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
-    <mapping resource="resources.dobro.spring.library.entities/AuthorEntity.hbm.xml"/>
-    <mapping resource="resources.dobro.spring.library.entities/BookEntity.hbm.xml"/>
-    <mapping resource="resources.dobro.spring.library.entities/GenreEntity.hbm.xml"/>
-    <mapping resource="resources.dobro.spring.library.entities/PublisherEntity.hbm.xml"/>
-    <mapping resource="resources.dobro.spring.library.entities/VoteEntity.hbm.xml"/>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.show_sql">true</property>
+    <mapping resource="resources.dobro.spring.library.entities/Author.hbm.xml"/>
+    <mapping resource="resources.dobro.spring.library.entities/Book.hbm.xml"/>
+    <mapping resource="resources.dobro.spring.library.entities/Genre.hbm.xml"/>
+    <mapping resource="resources.dobro.spring.library.entities/Publisher.hbm.xml"/>
+    <mapping resource="resources.dobro.spring.library.entities/Vote.hbm.xml"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

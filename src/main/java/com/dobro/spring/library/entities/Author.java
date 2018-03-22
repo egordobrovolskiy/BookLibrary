@@ -2,6 +2,7 @@ package com.dobro.spring.library.entities;
 
 import java.sql.Date;
 
+
 public class Author {
     private long id;
     private String fio;
@@ -36,11 +37,11 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Author that = (Author) o;
+        Author author = (Author) o;
 
-        if (id != that.id) return false;
-        if (fio != null ? !fio.equals(that.fio) : that.fio != null) return false;
-        if (birthday != null ? !birthday.equals(that.birthday) : that.birthday != null) return false;
+        if (id != author.id) return false;
+        if (birthday != null ? !birthday.equals(author.birthday) : author.birthday != null) return false;
+        if (fio != null ? !fio.equals(author.fio) : author.fio != null) return false;
 
         return true;
     }
